@@ -1,0 +1,17 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* Імпортуємо сам Tailwind (новий синтаксис v4) */
+@import "tailwindcss";
+
+/* Налаштовуємо твій шрифт */
+@theme {
+  --font-sans: "Montserrat", sans-serif;
+}
+
+/* Базові стилі для всього додатку */
+@layer base {
+  body {
+    @apply antialiased bg-gray-50 text-gray-900;
+  }
+}
