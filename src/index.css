@@ -1,6 +1,6 @@
 /* src/index.css */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
-
+@custom-variant dark (&:is(.dark *));
 /* Імпортуємо сам Tailwind (новий синтаксис v4) */
 @import "tailwindcss";
 
