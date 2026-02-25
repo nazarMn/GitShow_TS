@@ -15,3 +15,8 @@
     @apply antialiased bg-gray-50 text-gray-900;
   }
 }
+
+@theme {
+  --font-sans: 'Montserrat', sans-serif;
+  --font-serif: 'Value Serif', 'merriweather', serif;
+}
