@@ -63,3 +63,41 @@ export interface IReadStatus {
   userId: string; // ID користувача, який читає
   lastReadAt: string; // Дати з бекенду завжди приходять як рядки у форматі ISO 8601
 }
+// --- НАВИЧКИ ---
+
+export interface ISkill {
+  _id: string;
+  name: string;
+  description: string;
+  userId: string; // ID користувача
+}
+
+// --- КОРИСТУВАЧІ ---
+
+export interface IUser {
+  _id: string;
+  githubId: string;
+  username: string;
+  name?: string;
+  profileUrl?: string;
+  avatarUrl?: string;
+  apiKey?: string;
+  location?: string;
+  bio?: string;
+  company?: string;
+  email?: string;
+  instagram?: string;
+  twitter?: string;
+  facebook?: string;
+  YearsOfExperience?: number; // Зберіг велику літеру Y, як у твоїй схемі
+  
+  // Для масивів ми вказуємо, що саме в них лежить
+  contributions?: any[]; // Поки що any[], але якщо знаєш точну структуру, можна описати її пізніше
+  bookmarkedProjects?: string[]; // Масив ID проектів, тому string[]
+  
+  // Відстеження фоловерів
+  // Зверни увагу: якщо на бекенді ти робиш .populate('followers'), 
+  // то тут буде IUser[], але зазвичай приходять просто ID (string)
+  followers?: string[]; 
+  following?: string[];
+}
