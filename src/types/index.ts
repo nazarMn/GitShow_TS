@@ -42,3 +42,24 @@ export interface IMessage {
   text: string;
   createdAt: string;
 }
+// --- ПРОЕКТИ ТА ПОРТФОЛІО ---
+
+export interface IProject {
+  _id: string;
+  name: string;
+  link: string; // Посилання на репозиторій (наприклад, GitHub)
+  description?: string; // Знак питання означає, що поле не обов'язкове (required: false)
+  imageUrl?: string;
+  websiteUrl?: string; // Посилання на задеплоєний проект
+  userId: string; // ID користувача (IUser)
+  userAvatar?: string;
+}
+
+// --- СТАТУСИ ЧАТУ (ПРОЧИТАНО/НЕ ПРОЧИТАНО) ---
+
+export interface IReadStatus {
+  _id: string;
+  chatId: string;
+  userId: string; // ID користувача, який читає
+  lastReadAt: string; // Дати з бекенду завжди приходять як рядки у форматі ISO 8601
+}
