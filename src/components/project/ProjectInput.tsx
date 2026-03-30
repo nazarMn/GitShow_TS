@@ -105,4 +105,4 @@ const ProjectInput: React.FC = () => {
   );
 };
 
-export default ProjectInput;
+export default ProjectInput
